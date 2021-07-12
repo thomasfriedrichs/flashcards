@@ -30,4 +30,33 @@ describe('DECKS REDUCERS TESTS', () => {
   test('no action returns unchanged decks state', () => {
     expect(decksReducer(decks, { action: null })).toEqual(decks)
   })
+
+  test('add deck returns state with a new deck', () => {
+    action = {
+      type: ADD_DECK,
+      ...testDeck
+    }
+    const result = [...decks, testDeck]
+    expect(decksReducer(decks, action)).toEqual(result)
+  })
+
+  test('delete deck removes the deck name we wanted deleted', () => {
+    action = {
+      type: DELETE_DECK,
+      name: "spanish_vocab"
+    }
+    expect(decksReducer(decks, action )).toEqual([])
+  })
+
+  test('update decks changes the contents', () => {
+    const updatedDeck = {
+      name: "spanish_vocab",
+      category: "newCategory",
+      cards: []
+    }
+    action = {
+      type: UPDATE_DECK, ...updatedDeck
+    }
+    expect(decksReducer(decks, action)).toEqual([updatedDeck])
+  })
 })
