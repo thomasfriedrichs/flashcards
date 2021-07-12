@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "front":"CAT",
+      "back":"GATO"
+    },
+    {
+      "front":"DOG",
+      "back":"PERRO"
+    },
+    {
+      "front":"HORSE",
+      "back":"CABALLO"
+    },
+    {
+      "front":"RABBIT",
+      "back":"CONEJO"
+    },
+    {
+      "front":"TIGER",
+      "back":"TIGRE"
+    },
+    {
+      "front":"KANGAROO",
+      "back":"CANGURO"
+    }
+  ]
+}

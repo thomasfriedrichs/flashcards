@@ -1,0 +1,36 @@
+
+Stuff we want it to do:
+  Create deck
+  Create card
+  Review flashcard deck
+    show front, click, show back
+
+
+
+Pages
+  Home
+    list all categories?
+    lists some/top decks by category
+
+  Category
+    show all decks for that category
+
+  Categories
+    create a new category
+    add/remove decks from category
+
+  Deck
+    show that deck
+    change/add/delete category for this deck
+    review the cards
+    add/edit/delete card
+    quiz?
+
+  Create deck
+    create new deck
+
+
+/category/decks => all decks for that category
+/category/deck  => single deck by id
+
+
