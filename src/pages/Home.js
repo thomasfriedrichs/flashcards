@@ -4,7 +4,7 @@ function Home() {
   return(
     <div style={{ minHeight: '100vh' }}>
     <Header title='Home' />
-      // main content goes here
+      main content goes here
     </div>
   )
 }
