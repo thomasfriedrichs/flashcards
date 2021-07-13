@@ -1,18 +1,38 @@
 import React, { useState } from 'react';
-import SingleCard from './SingleCard';
+import SingleCard from './SingleCard'
+import { GiPaperArrow } from 'react-icons/gi'
 
 function CardsGallery(props) {
-  const [cardIndex, changeCardIndex] = useState(0);
+  const [cardIndex, changeCardIndex] = useState(0)
+  const galleryStyles = {
+    display: 'flex',
+    minHeight: '350px',
+  }
+
+  const buttonStyles = {
+    background: 'unset',
+    border: '1px solid beige',
+    padding: '22px',
+    cursor: 'pointer'
+  }
 
   return (
-    <div>
+    <div style={galleryStyles}>
       <button
-        disabled={ cardIndex === 0 ? 'disabled' : false }
-        onClick={() => changeCardIndex(cardIndex - 1)}>PREV</button>
-        <SingleCard card={props.cards[cardIndex]} />
+        style={buttonStyles}
+        disabled={ cardIndex <= 0 ? 'disabled' : false }
+        onClick={() => changeCardIndex(cardIndex - 1)}>
+          <GiPaperArrow style={{ transform: 'rotateZ(140deg)', fontSize: '40px' }} />
+      </button>
+
+      <SingleCard card={props.cards[cardIndex]} />
+
       <button
-        dislabed={ cardIndex >= (props.cards.length - 1) ? 'disabled' : false}
-        onClick={() => changeCardIndex(cardIndex + 1)}>NEXT</button>
+        style={buttonStyles}
+        disabled={ cardIndex >= (props.cards.length - 1) ? 'disabled' : false}
+        onClick={() => changeCardIndex(cardIndex + 1)}>
+          <GiPaperArrow style={{ transform: 'rotateZ(315deg)', fontSize: '40px' }} />
+      </button>
     </div>
   )
 }

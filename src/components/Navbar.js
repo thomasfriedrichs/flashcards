@@ -12,8 +12,10 @@ function Navbar(props) {
     alignContent: 'center',
     alignItems: 'center',
     marginBottom: '22px',
-    overflow: 'none'
+    overflow: 'none',
+    justifyContent: 'center'
   }
+
   const linkStyles = {
     minWidth: '160px',
     lineHeight: '90px',
@@ -24,6 +26,7 @@ function Navbar(props) {
     paddingRight: '22px',
     fontWeight: '500',
   }
+
   const linkDivStyles = {
     paddingTop: '25px',
     lineHeight: '50px',

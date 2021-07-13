@@ -7,7 +7,7 @@ function SingleDeck(props) {
       <div className='flex'>
         <h4>Name: {props.name}</h4>
         <p>Category: {props.category}</p>
-        <p>Cards: {props.cards.length ? <CardsGallery cards={props.cards} /> : 'No cards yet'}</p>
+        <div style={{ padding: '20px' }}>{props.cards.length ? <CardsGallery cards={props.cards} /> : 'No cards yet'}</div>
       </div>
     </Link>
   )
