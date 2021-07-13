@@ -9,17 +9,10 @@ function CardsGallery(props) {
     minHeight: '350px',
   }
 
-  const buttonStyles = {
-    background: 'unset',
-    border: '1px solid beige',
-    padding: '22px',
-    cursor: 'pointer'
-  }
-
   return (
     <div style={galleryStyles}>
       <button
-        style={buttonStyles}
+        className='buttonStyles'
         disabled={ cardIndex <= 0 ? 'disabled' : false }
         onClick={() => changeCardIndex(cardIndex - 1)}>
           <GiPaperArrow style={{ transform: 'rotateZ(140deg)', fontSize: '40px' }} />
@@ -28,7 +21,7 @@ function CardsGallery(props) {
       <SingleCard card={props.cards[cardIndex]} />
 
       <button
-        style={buttonStyles}
+        className='buttonStyles'
         disabled={ cardIndex >= (props.cards.length - 1) ? 'disabled' : false}
         onClick={() => changeCardIndex(cardIndex + 1)}>
           <GiPaperArrow style={{ transform: 'rotateZ(315deg)', fontSize: '40px' }} />

@@ -13,10 +13,6 @@ function AddCardForm(props) {
     firestore.collection('decks').doc(props.deckId).update({
       cards: firebase.firestore.FieldValue.arrayUnion({ front: front, back: back })
     })
-    // firestore.collection('decks').doc(props.deckId).update('cards').push({
-    //   front: front,
-    //   back: back
-    // })
     setFront('')
     setBack('')
   }
@@ -25,7 +21,7 @@ function AddCardForm(props) {
     <div>
       <h3>Add a card</h3>
       <form onSubmit={e => addCard(e)} style={{ display: 'flex', flexDirection: 'column' }} >
-        <div style={{ display: 'flex', justifyContent: 'space-around'}} >
+        <div style={{ display: 'flex', justifyContent: 'space-around', paddingBottom: '11px' }} >
           <label htmlFor='front'>Card Front</label>
           <input
             style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
@@ -36,7 +32,7 @@ function AddCardForm(props) {
             value={front}
             onChange={e => setFront(e.target.value)} />
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-around'}} >
+        <div style={{ display: 'flex', justifyContent: 'space-around', paddingBottom: '11px' }} >
           <label htmlFor='back'>Card Back</label>
           <input
             style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
@@ -47,7 +43,7 @@ function AddCardForm(props) {
             value={back}
             onChange={e => setBack(e.target.value)} />
         </div>
-        <button type='submit'>Add Card</button>
+        <button className='buttonStyles' type='submit'>Add Card</button>
       </form>
     </div>
   )

@@ -9,9 +9,15 @@ function DecksList() {
   ])
   const decks = useSelector(state => state.firestore.ordered.decks)
 
+  const decksContainer = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 33.333%)',
+    gridGap: '10px'
+  }
+
   if (isLoaded(decks)) {
     return (
-      <div>
+      <div style={decksContainer}>
         {decks.map(deck => <SingleDeck key={deck.id} {...deck} />)}
       </div>
     )

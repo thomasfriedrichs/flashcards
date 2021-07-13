@@ -6,11 +6,13 @@ import React, { useState } from 'react';
 
 import Header from './../components/Header'
 import SingleDeck from './../components/SingleDeck'
-import AddCardForm from '../components/AddCardForm';
+import AddCardForm from './../components/AddCardForm'
+import EditDeckForm from './../components/EditDeckForm'
 
-function Deck(props) {
+function Deck() {
   const { id } = useParams()
-  const [addCardFormShowing, setShow] = useState(false);
+  const [addCardFormShowing, setAddCardFormShowing] = useState(false)
+  const [editDeckFormShowing, setEditDeckFormShowing] = useState(false)
 
   useFirestoreConnect([
     { collection: 'decks'}
@@ -19,18 +21,30 @@ function Deck(props) {
   const decks = useSelector(state => state.firestore.ordered.decks)
 
   if (isLoaded(decks)) {
-    const deck = decks.filter(deck => deck.id === id)
+    const filtered = decks.filter(deck => deck.id === id)
+    const deck = filtered[0]
     return (
       <div className='container'>
         <Header title='Deck' />
-        <SingleDeck {...deck[0]} />
-        <button onClick={() => setShow(!addCardFormShowing)}>
-          {addCardFormShowing ? `Cancel` : `Add Card`}
-        </button>
+        <SingleDeck {...deck} />
+
+        <div style={{ display: 'flex' }} >
+          <div style={{ padding: '22px', marginTop: '40px' }}>
+            <button className='buttonStyles' onClick={() => setEditDeckFormShowing(!editDeckFormShowing)}>
+              { editDeckFormShowing ? `Cancel` : `Edit Deck` }
+            </button>
+          </div>
+
+          <div style={{ padding: '22px', marginTop: '40px' }}>
+            <button className='buttonStyles' onClick={() => setAddCardFormShowing(!addCardFormShowing)}>
+              { addCardFormShowing ? `Cancel` : `Add Card` }
+            </button>
+          </div>
+        </div>
+
         { addCardFormShowing ? <AddCardForm deckId={id} /> : null }
-
+        { editDeckFormShowing ? <EditDeckForm deckId={id} name={deck.name} category={deck.category} /> : null }
       </div>
-
     )
   } else {
     return (
