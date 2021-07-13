@@ -19,26 +19,34 @@ function AddDeckForm() {
   }
 
   return (
-    <form onSubmit={e => createNewDeck(e)}>
-      <label htmlFor='name'>Name</label>
-      <input
-        type='text'
-        required='required'
-        name='name'
-        placeholder='Deck Name'
-        value={name}
-        onChange={e => setName(e.target.value)} />
-
-      <label htmlFor='category'>Category</label>
-      <input
-        type='text'
-        required='required'
-        name='category'
-        placeholder='Deck Category'
-        value={category}
-        onChange={e => setCategory(e.target.value)} />
-      <button type='submit'>Create New Deck</button>
-    </form>
+    <div>
+      <h3>Create A New Deck</h3>
+      <form onSubmit={e => createNewDeck(e)} style={{ display: 'flex', flexDirection: 'column' }} >
+        <div style={{ display: 'flex', justifyContent: 'space-around'}} >
+          <label htmlFor='name'>Name</label>
+          <input
+            style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
+            type='text'
+            required='required'
+            name='name'
+            placeholder='Deck Name'
+            value={name}
+            onChange={e => setName(e.target.value)} />
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-around'}} >
+          <label htmlFor='category'>Category</label>
+          <input
+            style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
+            type='text'
+            required='required'
+            name='category'
+            placeholder='Deck Category'
+            value={category}
+            onChange={e => setCategory(e.target.value)} />
+        </div>
+        <button type='submit'>Create New Deck</button>
+      </form>
+    </div>
   )
 }
 
