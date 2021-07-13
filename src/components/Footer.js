@@ -10,7 +10,7 @@ function Footer() {
     <div style={footerStyle}>
       <h3>Footer</h3>
       <span>&nbsp;-&nbsp;</span>
-      <p>&copy; 2021 Tom</p>
+      <p>&copy; 2021 Thomas & Tom</p>
     </div>
   )
 }

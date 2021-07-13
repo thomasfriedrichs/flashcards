@@ -1,4 +1,8 @@
-import { GiConverseShoe } from 'react-icons/gi'
+import { CgCardSpades } from 'react-icons/cg'
+import { IoOptionsSharp } from 'react-icons/io5'
+import { BiHomeHeart } from 'react-icons/bi'
+
+import { Link } from 'react-router-dom'
 
 function Navbar(props) {
   const navbarStyles = {
@@ -25,15 +29,21 @@ function Navbar(props) {
     lineHeight: '50px',
     paddingRight: '10px'
   }
+
   return (
     <div style={navbarStyles}>
-      <a type='submit'
-        onClick={event => props.navigateTo(event, 'home')}
-        style={linkStyles} href='/'
-      >
-        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+      <Link style={linkStyles} to='/'>
+        <div style={linkDivStyles}><BiHomeHeart style={{ fontSize: '40px'}} /></div>
         <span>Home</span>
-      </a>
+      </Link>
+      <Link style={linkStyles} to='/categories'>
+        <div style={linkDivStyles}><IoOptionsSharp style={{ fontSize: '40px'}} /></div>
+        <span>Categories</span>
+      </Link>
+      <Link style={linkStyles} to='/decks'>
+        <div style={linkDivStyles}><CgCardSpades style={{ fontSize: '40px'}} /></div>
+        <span>Decks</span>
+      </Link>
     </div>
   )
 }

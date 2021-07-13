@@ -1,18 +1,23 @@
+// React
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+
+// App and styles
+import App from './App'
+import './index.css'
+
+// Firebase
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore';
 import firebase from "./firebase";
-import { Provider } from 'react-redux';
 
-import './index.css'
-import App from './App'
+// Redux
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import rootReducer from './reducers/root'
 
 const store = createStore(rootReducer);
-
 const rrfProps = {
   firebase,
   config: {
