@@ -1,8 +1,7 @@
-
 import { useSelector } from 'react-redux'
-import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'
-import { useParams } from 'react-router-dom'
-import React, { useState } from 'react';
+import { useFirestoreConnect, isLoaded, useFirestore } from 'react-redux-firebase'
+import { useParams, useHistory } from 'react-router-dom'
+import React, { useState } from 'react'
 
 import Header from './../components/Header'
 import SingleDeck from './../components/SingleDeck'
@@ -11,14 +10,20 @@ import EditDeckForm from './../components/EditDeckForm'
 
 function Deck() {
   const { id } = useParams()
+  const history = useHistory()
   const [addCardFormShowing, setAddCardFormShowing] = useState(false)
   const [editDeckFormShowing, setEditDeckFormShowing] = useState(false)
+  const firestore = useFirestore()
+  const decks = useSelector(state => state.firestore.ordered.decks)
 
   useFirestoreConnect([
     { collection: 'decks'}
   ])
 
-  const decks = useSelector(state => state.firestore.ordered.decks)
+  const handleDeletingDeck = () => {
+    firestore.delete({collection: 'decks', doc: id})
+    history.push('/decks')
+  }
 
   if (isLoaded(decks)) {
     const filtered = decks.filter(deck => deck.id === id)
@@ -38,6 +43,12 @@ function Deck() {
           <div style={{ padding: '22px', marginTop: '40px' }}>
             <button className='buttonStyles' onClick={() => setAddCardFormShowing(!addCardFormShowing)}>
               { addCardFormShowing ? `Cancel` : `Add Card` }
+            </button>
+          </div>
+
+          <div style={{ padding: '22px', marginTop: '40px' }}>
+            <button className='buttonStyles' onClick={handleDeletingDeck} >
+              Delete Deck
             </button>
           </div>
         </div>
