@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useFirestore } from 'react-redux-firebase'
+import './AddDeckForm.css'
 
 function AddDeckForm() {
   const [name, setName] = useState('')
@@ -21,7 +22,7 @@ function AddDeckForm() {
     <div>
       <h3>Create A New Deck</h3>
       <form onSubmit={e => createNewDeck(e)} style={{ display: 'flex', flexDirection: 'column' }} >
-        <div style={{ display: 'flex', justifyContent: 'space-around', paddingBottom: '11px' }} >
+        <div className='formInput' >
           <label htmlFor='name'>Name</label>
           <input
             type='text'
@@ -31,7 +32,7 @@ function AddDeckForm() {
             value={name}
             onChange={e => setName(e.target.value)} />
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-around', paddingBottom: '11px' }} >
+        <div className='formInput' >
           <label htmlFor='category'>Category</label>
           <input
             type='text'

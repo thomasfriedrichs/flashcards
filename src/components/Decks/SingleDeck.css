@@ -1,0 +1,5 @@
+.deckStyles {
+  display: flex;
+  flex-direction: column;
+  padding: 11px
+}

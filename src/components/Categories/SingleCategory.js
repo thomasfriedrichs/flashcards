@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import './SingleCategory.css'
 
 function SingleCategory(props) {
   return (
-    <button className='buttonStyles' style={{ marginTop: '42px' }}>
-      <Link to={`/category/${props.category}`} >{props.category}</Link>
-    </button>
+    <div className='mt3'>
+      <button className='buttonStyles'>
+        <Link to={`/category/${props.category}`} >{props.category}</Link>
+      </button>
+    </div>
   )
 }
 

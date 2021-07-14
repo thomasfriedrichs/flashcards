@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useFirestore } from 'react-redux-firebase'
+import './EditDeckForm.css'
 
 function EditDeckForm(props) {
   const [name, setName] = useState(props.name)
@@ -20,7 +21,7 @@ function EditDeckForm(props) {
     <div>
       <h3>Edit Deck</h3>
       <form onSubmit={e => editDeck(e)} style={{ display: 'flex', flexDirection: 'column' }} >
-        <div style={{ display: 'flex', justifyContent: 'space-around'}} >
+        <div className='formContainer' >
           <label htmlFor='name'>Name</label>
           <input
             type='text'

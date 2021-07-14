@@ -1,18 +1,14 @@
 import { Link } from 'react-router-dom'
 import CardsGallery from '../Cards/CardsGallery'
 import { useParams } from 'react-router-dom'
+import './SingleDeck.css'
 
 function SingleDeck(props) {
   const { id } = useParams()
-  const deckStyles = {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '11px'
-  }
 
   return (
     <Link to={`/deck/${props.id}`}>
-      <div style={deckStyles} >
+      <div className='deckStyles' >
         <h3>Name: {props.name}</h3>
         <p>Category: {props.category}</p>
         { id ?

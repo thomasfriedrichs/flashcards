@@ -97,3 +97,19 @@ input {
   flex-grow: 4;
   min-height: 32px
 }
+
+.mt1 {
+  margin-top: 1rem;
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.mt3 {
+  margin-top: 3rem;
+}
+
+.mt4 {
+  margin-top: 4rem;
+}
