@@ -24,7 +24,7 @@ function App(props) {
           <Route path='/categories'>
             <Categories />
           </Route>
-          <Route path='/category/:id'>
+          <Route path='/category/:category'>
             <Category />
           </Route>
           <Route path='/decks'>
