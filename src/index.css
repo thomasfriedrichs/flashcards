@@ -87,3 +87,11 @@ h4 {
   padding: 22px;
   cursor: pointer;
 }
+
+label {
+  flex-grow: 1;
+}
+
+input {
+  flex-grow: 4;
+}

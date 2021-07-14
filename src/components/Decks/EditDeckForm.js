@@ -23,7 +23,6 @@ function EditDeckForm(props) {
         <div style={{ display: 'flex', justifyContent: 'space-around'}} >
           <label htmlFor='name'>Name</label>
           <input
-            style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
             type='text'
             required='required'
             name='name'
@@ -34,7 +33,6 @@ function EditDeckForm(props) {
         <div style={{ display: 'flex', justifyContent: 'space-around'}} >
           <label htmlFor='category'>Category</label>
           <input
-            style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
             type='text'
             required='required'
             name='category'

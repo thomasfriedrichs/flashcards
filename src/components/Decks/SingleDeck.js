@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import CardsGallery from './CardsGallery'
+import CardsGallery from '../Cards/CardsGallery'
 import { useParams } from 'react-router-dom'
 
 function SingleDeck(props) {

@@ -1,6 +1,6 @@
-import Header from './../components/Header'
-import AddDeckForm from './../components/AddDeckForm'
-import DecksList from './../components/DecksList'
+import Header from './../components/Layout/Header'
+import AddDeckForm from './../components/Decks/AddDeckForm'
+import DecksList from './../components/Decks/DecksList'
 
 function Decks() {
   return(

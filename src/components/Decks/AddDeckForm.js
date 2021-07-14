@@ -24,7 +24,6 @@ function AddDeckForm() {
         <div style={{ display: 'flex', justifyContent: 'space-around', paddingBottom: '11px' }} >
           <label htmlFor='name'>Name</label>
           <input
-            style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
             type='text'
             required='required'
             name='name'
@@ -35,7 +34,6 @@ function AddDeckForm() {
         <div style={{ display: 'flex', justifyContent: 'space-around', paddingBottom: '11px' }} >
           <label htmlFor='category'>Category</label>
           <input
-            style={{ flex: 1, margin: '0 auto', maxWidth: '80%'}}
             type='text'
             required='required'
             name='category'

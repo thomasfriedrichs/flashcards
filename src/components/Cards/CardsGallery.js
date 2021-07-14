@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SingleCard from './SingleCard'
+import SingleCard from './GallerySingleCard'
 import { GiPaperArrow } from 'react-icons/gi'
 
 function CardsGallery(props) {

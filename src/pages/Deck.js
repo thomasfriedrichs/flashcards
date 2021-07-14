@@ -3,10 +3,10 @@ import { useFirestoreConnect, isLoaded, useFirestore } from 'react-redux-firebas
 import { useParams, useHistory } from 'react-router-dom'
 import React, { useState } from 'react'
 
-import Header from './../components/Header'
-import SingleDeck from './../components/SingleDeck'
-import AddCardForm from './../components/AddCardForm'
-import EditDeckForm from './../components/EditDeckForm'
+import Header from '../components/Layout/Header'
+import SingleDeck from '../components/Decks/SingleDeck'
+import AddCardForm from '../components/Cards/AddCardForm'
+import EditDeckForm from '../components/Decks/EditDeckForm'
 
 function Deck() {
   const { id } = useParams()

@@ -9,8 +9,8 @@ import Decks from './pages/Decks'
 import Deck from './pages/Deck'
 
 // Components
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import Footer from './components/Layout/Footer'
+import Navbar from './components/Layout/Navbar'
 
 function App(props) {
   return (
