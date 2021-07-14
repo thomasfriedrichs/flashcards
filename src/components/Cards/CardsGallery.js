@@ -4,13 +4,9 @@ import { GiPaperArrow } from 'react-icons/gi'
 
 function CardsGallery(props) {
   const [cardIndex, changeCardIndex] = useState(0)
-  const galleryStyles = {
-    display: 'flex',
-    minHeight: '350px',
-  }
 
   return (
-    <div style={galleryStyles}>
+    <div className='galleryStyles'>
       <button
         className='buttonStyles'
         disabled={ cardIndex <= 0 ? 'disabled' : false }

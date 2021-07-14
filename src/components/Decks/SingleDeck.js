@@ -8,9 +8,9 @@ function SingleDeck(props) {
 
   return (
     <Link to={`/deck/${props.id}`}>
-      <div className='deckStyles' >
-        <h3>Name: {props.name}</h3>
-        <p>Category: {props.category}</p>
+      <div className='flex f-col deckStyles' >
+        <h3 className='nameStyles'>{props.name}</h3>
+        <p className='faded'>{props.category}</p>
         { id ?
           <div style={{ padding: '20px' }}>{props.cards.length ? <CardsGallery cards={props.cards} /> : 'No cards yet'}</div>
           : null
