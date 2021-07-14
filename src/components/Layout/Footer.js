@@ -1,16 +1,11 @@
+import './Footer.css'
+
 function Footer() {
-  const footerStyle = {
-    backgroundColor: 'rgb(76, 195, 255)',
-    marginTop: '120px',
-    padding: '10px',
-    display: 'flex',
-    alignItems: 'center'
-  }
   return (
-    <div style={footerStyle}>
+    <div className='footerStyles' >
       <h3>Footer</h3>
       <span>&nbsp;-&nbsp;</span>
-      <p>&copy; 2021 Thomas & Tom</p>
+      <p>&copy; 2021 <a href="https://github.com/thomasfriedrichs">Thomas</a> & <a href="https://github.com/usarneme">Tom</a></p>
     </div>
   )
 }

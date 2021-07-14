@@ -1,0 +1,27 @@
+.navbarStyles {
+  display: flex;
+  flex-direction: row;
+  background: rgba(200,200,200,0.7);
+  align-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+  overflow: none;
+  justify-content: center;
+}
+
+.linkStyles {
+  min-width: 160px;
+  line-height: 90px;
+  display: flex;
+  flex-direction: row;
+  border: 1px groove gray;
+  padding-left: 10px;
+  padding-right: 22px;
+  font-weight: 500;
+}
+
+.linkDivStyles {
+  padding-top: 25px;
+  line-height: 40px;
+  padding-right: 10px;
+}
