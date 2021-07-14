@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import EditCardForm from './EditCardForm'
 
 function SingleCardListView(props) {
-  const [editorShowing, setEditorShowing] = useState(false)  
+  const [editorShowing, setEditorShowing] = useState(false)
 
   return (
     <div style={{ background: 'rgba(255,255,255,0.25)', margin: '10px', padding: '12px' }}>

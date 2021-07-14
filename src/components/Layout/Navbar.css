@@ -1,27 +1,65 @@
-.navbarStyles {
+.navbar-wrapper {
   display: flex;
-  flex-direction: row;
-  background: rgba(200,200,200,0.7);
-  align-content: center;
+  justify-content: space-around;
+}
+
+.link-wrapper {
+  padding: 5px;
+  display: flex;
   align-items: center;
-  margin-bottom: 22px;
-  overflow: none;
   justify-content: center;
+  background-color: rgba(255,255,255,0.25);
+  line-height: 20px;
+  font-size: 18px;
+  flex: 1;
+  cursor: pointer;
+  margin: 0 1px;
 }
 
-.linkStyles {
-  min-width: 160px;
-  line-height: 90px;
-  display: flex;
-  flex-direction: row;
-  border: 1px groove gray;
-  padding-left: 10px;
-  padding-right: 22px;
-  font-weight: 500;
+.navbar-icon {
+  font-size: 20px;
 }
 
-.linkDivStyles {
-  padding-top: 25px;
-  line-height: 40px;
-  padding-right: 10px;
+.link-wrapper:hover {
+  background: rgba(255,255,255,0.45);
+}
+
+.link-selected {
+  background: rgba(255,255,255,0.55);
+}
+
+@media all and (min-width: 768px) {
+  .link-wrapper {
+    font-size: 35px;
+    padding: 10px;
+    margin: 0 3px;
+  }
+
+  .navbar-icon {
+    font-size: 35px;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  .link-wrapper {
+    font-size: 40px;
+    padding: 13px;
+    margin: 0 4px;
+  }
+
+  .navbar-icon {
+    font-size: 40px;
+  }
+}
+
+@media all and (min-width: 1910px) {
+  .link-wrapper {
+    font-size: 45px;
+    padding: 15px;
+    margin: 0 5px;
+  }
+
+  .navbar-icon {
+    font-size: 45px;
+  }
 }

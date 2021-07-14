@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useFirestore , useFirebase } from 'react-redux-firebase'
+import './AddCardForm.css'
 
 function AddCardForm(props) {
 
