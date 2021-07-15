@@ -1,8 +1,8 @@
-import Header from './../components/Header'
+import Header from './../components/Layout/Header'
 
 function Home() {
   return(
-    <div style={{ minHeight: '100vh' }}>
+    <div className='container'>
     <Header title='Home' />
       main content goes here
     </div>

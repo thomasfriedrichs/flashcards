@@ -1,0 +1,5 @@
+.divStyles {
+  display: 'flex';
+  justify-Content: 'space-between';
+  align-Items: 'center';
+}

@@ -1,0 +1,8 @@
+.cardStyles  {
+  flex: '1';
+  text-Align: 'center';
+  align-Self: 'center';
+  line-Height: '350px';
+  background: 'rgba(255,255,255,0.2)';
+  border: '1px solid beige';
+}

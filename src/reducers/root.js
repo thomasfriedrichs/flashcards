@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import { firestoreReducer } from 'redux-firestore'
 
-import decks from './decks'
+import decksReducer from './decks'
 
 const rootReducer = combineReducers({
-  decks: decks,
+  decksReducer: decksReducer,
   firestore: firestoreReducer
 })
 

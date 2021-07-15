@@ -1,0 +1,7 @@
+.footerStyles {
+  background-color: rgb(76, 195, 255);
+  margin-top: 120px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
